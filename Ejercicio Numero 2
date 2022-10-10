@@ -1,0 +1,11 @@
+salario=int(input("Ingrese su salario..."))       #Se pide al usuario su salario
+vtotalv=int(input("Ingrese el valor total de las ventas que realizó..."))       #Se pide al usuario su valor total de ventas
+def salario_tot(salario,vtotalv):      #Se inicia la funcion con los parametros de salario y valor total de ventas
+    if vtotalv>=500000 and vtotalv<2000000:  #Condición 1: Si el v.total es mayor/igual a 500000 y menor a 2000000
+        el_salario_total=(vtotalv*0.05)+salario    #Se asigna a "el_salario_total" la suma del salario + 5% de comisión
+    elif vtotalv>2000000:
+        el_salario_total=(vtotalv*0.1)+salario     #Se asigna a "el_salario_total" la suma del salario + 10% de comisión
+    elif vtotalv<500000:
+        el_salario_total=salario                   #Se asigna a "el_salario_total" el salario sin comisión.
+    return (el_salario_total)
+print(salario_tot(salario,vtotalv))                #Esta línea imprime el salario total.
