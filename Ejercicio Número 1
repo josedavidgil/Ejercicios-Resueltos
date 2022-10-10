@@ -1,7 +1,7 @@
+email=input("Ingresar el e-mail a validar...")  #Se pide el correo en caso de no ingresarlo por la consola de Python.
 def validar (email): #Se crea la función con el parámetro "email"
     a=list(email) #Asignamos a la variable "a" el correo en forma de lista letra por letra.
     for i in a:  #Recorremos la lista "a".
         if i=="@":
             return ("El correo es válido.") #Si encuentra al carácter "@" el correo será valido.
-        else:
-            return ("El correo no es válido.") #Si no encuentra al carácter "@" el correo no será valido.
+print(validar(email))
