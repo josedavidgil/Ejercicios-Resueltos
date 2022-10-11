@@ -1,0 +1,24 @@
+import random      #Se importa la libreria que permite escoger de manera aleatoria si la computadora saca piedra, papel o tijera
+opc="Si"    #Variable que funciona para repetir el juego
+while opc=='Si':       #Mientras el jugador desee, el juego seguirá repitiendose
+    opc1=input('¿Piedra, papel o tijera?.')        #Se solicita al usuario ingresar su opcion
+    def ppt (opc1):
+        l=['Piedra','Papel','Tijera']
+        opc2=random.choice(l)      #Uso de la librería random para escoger entre las 3 opciones
+        print('Tu: ', opc1, '    PC: ', opc2)    #Imprime la selección del jugador y la del computador.
+        if opc1==opc2:      #Desde esta sección se usan condicionales para establecer las reglas del juego, es decir, piedra le gana a tijera, tijera le gana a papel, papel le gana a tijera, etc.
+            return('Empate.')
+        elif (opc1=='Piedra' and opc2=='Papel'):
+            return('Computadora gana.')
+        elif (opc1=='Papel' and opc2=='Piedra'):
+            return('Tu ganas')
+        elif (opc1=='Piedra' and opc2=='Tijera'):
+            return('Tu ganas.')
+        elif (opc1=='Tijera' and opc2=='Piedra'):
+            return('Computadora gana.')
+        elif (opc1=='Papel' and opc2=='Tijera'):
+            return('Computadora gana.')
+        elif (opc1=='Tijera' and opc2=='Papel'):
+            return('Tu ganas.')
+    print(ppt(opc1))          #Se llama la función por medio de esta sección
+    opc=input("Desea seguir jugando? (Si/No)")     #Pregunta al usuario si desea seguir jugando, en caso de una respuesta positiva el código se ejecutará denuevo, en caso de una respuesta negativa el código se acabará.
